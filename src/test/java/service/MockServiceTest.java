@@ -150,7 +150,8 @@ public class MockServiceTest {
     public void shouldPositionisTopForFindBynameLissandra(){
         when(mockService.findByName("리산드라")).thenReturn(new Champion("리산드라","미드",5));
         String championPosition=mockService.findByName("리산드라").getPosition();
-        assertThat(championPosition, is("탑"));
+        //assertThat(championPosition, is("탑"));
+        assertThat(championPosition, is("미드"));
     }
     // 2. 2개 이상의 챔피언을 List로 만들어 전체 챔피언을 가져오는 메소드 호출시 그 갯수가 맞는지 확인하는 테스트 코드를 작성하세요.
     @Test
